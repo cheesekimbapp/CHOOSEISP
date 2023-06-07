@@ -3,9 +3,9 @@
 Web Sistem Pendukung Keputusan (SPK) CHOOSEISP ini digunakan untuk pengambilan petusan pada kasus pemilihan Internet Service Provider (ISP) dengan tiga metode yang tersedia yaitu Simple Additive Weighting (SAW), Weighted Product (WP), dan Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS). Bahasa pemrograman yang digunakan adalah JavaScript dengan UI menggunakan framework adalah Bootstrap 5.
 
 # Tujuan 
-Tujuan pembuatan project akhir ini untuk memenuhi nilai UAS dari matakuliah SPK (Sistem Pengambilan Keputusan).
+Tujuan pembuatan project akhir ini untuk memenuhi nilai UAS dari matakuliah SPK (Sistem Pendukung Keputusan).
 
-Dosen Pengampu : Budi Prasetiyo
+Dosen Pengampu : Budi Prasetiyo, S.Si., M.Kom.
 
 # WEB 
 https://cheesekimbapp.000webhostapp.com/
