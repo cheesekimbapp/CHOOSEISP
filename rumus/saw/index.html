@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Logo tab -->
+    <link rel="icon" href="img/chooseisp-removebg-preview.png" type="image/png" />
+
+    <title>Simple Additive Weighting</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #030c59">
+      <div class="container">
+        <a class="navbar-brand" href="../../index.html#home">
+          <img src="img/chooseisp-removebg-preview.png" alt="CHOOSEISP Logo" height="30" />
+          CHOOSEISP
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../../index.html#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../index.html#about">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir Navbar -->
+
+    <section id="tabel" style="margin-top: 70px">
+      <!-- Tabel Utama -->
+      <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+        }
+        th,
+        td {
+          text-align: center;
+          padding: 8px;
+          border: 1px solid black;
+        }
+        th {
+          background-color: #030c59;
+          color: white;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+
+        /* merubah tampilan pada layar yang lebih kecil */
+        @media only screen and (max-width: 600px) {
+          table {
+            font-size: 12px;
+          }
+          th,
+          td {
+            padding: 4px;
+          }
+        }
+      </style>
+      <table>
+        <tr>
+          <th>Alternatif</th>
+          <th>Harga</th>
+          <th>Kecepatan</th>
+          <th>Jumlah Kuota</th>
+        </tr>
+        <tr>
+          <td>Telkomsel</td>
+          <td><input type="number" id="a1k1" min="0" /></td>
+          <td><input type="number" id="a1k2" min="0" /></td>
+          <td><input type="number" id="a1k3" min="0" /></td>
+        </tr>
+        <tr>
+          <td>Indosat</td>
+          <td><input type="number" id="a2k1" min="0" /></td>
+          <td><input type="number" id="a2k2" min="0" /></td>
+          <td><input type="number" id="a2k3" min="0" /></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="number" id="a3k1" min="0" /></td>
+          <td><input type="number" id="a3k2" min="0" /></td>
+          <td><input type="number" id="a3k3" min="0" /></td>
+        </tr>
+        <tr>
+          <td>XL</td>
+          <td><input type="number" id="a4k1" min="0" /></td>
+          <td><input type="number" id="a4k2" min="0" /></td>
+          <td><input type="number" id="a4k3" min="0" /></td>
+        </tr>
+        <tr>
+          <td>Smartfren</td>
+          <td><input type="number" id="a5k1" min="0" /></td>
+          <td><input type="number" id="a5k2" min="0" /></td>
+          <td><input type="number" id="a5k3" min="0" /></td>
+        </tr>
+      </table>
+      <!-- Akhir tabel utama -->
+
+      <!-- Tabel bobot -->
+      <style>
+        .table-wrapper {
+          margin-top: 20px;
+          width: 30%;
+          margin: 0 auto;
+        }
+        .table-wrapper table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        .table-wrapper th,
+        .table-wrapper td {
+          text-align: center;
+          padding: 8px;
+          border: 1px solid black;
+        }
+        .table-wrapper th {
+          background-color: #030c59;
+          color: white;
+        }
+        .table-wrapper tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+        .table-wrapper button {
+          display: block;
+          margin: 20px auto 0;
+          padding: 10px 20px;
+          background-color: #030c59;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        .table-wrapper button:hover {
+          background-color: #030c59;
+        }
+        #table-preferensi {
+          margin-top: 50px;
+        }
+        #table-preferensi th {
+          background-color: g#030c59;
+          color: white;
+        }
+        #table-preferensi tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      </style>
+
+      <div class="table-wrapper">
+        <table>
+          <tr>
+            <th>Kriteria</th>
+            <th>Bobot</th>
+          </tr>
+          <tr>
+            <td>Harga</td>
+            <td><input type="number" id="k1" min="0" /></td>
+          </tr>
+          <tr>
+            <td>Kecepatan</td>
+            <td><input type="number" id="k2" min="0" /></td>
+          </tr>
+          <tr>
+            <td>Jumlah Kuota</td>
+            <td><input type="number" id="k3" min="0" /></td>
+          </tr>
+        </table>
+        <button onclick="hitung()">Hitung</button>
+      </div>
+      <!-- Akhir tabel bobot -->
+
+      <!-- Tabel Hasil -->
+      <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        th,
+        td {
+          text-align: center;
+          padding: 8px;
+          border: 1px solid black;
+        }
+        th {
+          background-color: #030c59;
+          color: white;
+        }
+        tr:nth-child(even) {
+          background-color: #f2f2f2;
+        }
+      </style>
+
+      <div class="table-wrapper">
+        <table id="table-preferensi" style="display: none">
+          <tr>
+            <th>Alternatif</th>
+            <th>Nilai Preferensi</th>
+          </tr>
+          <tr>
+            <td>Telkomsel</td>
+            <td id="v1"></td>
+          </tr>
+          <tr>
+            <td>Indosat</td>
+            <td id="v2"></td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td id="v3"></td>
+          </tr>
+          <tr>
+            <td>XL</td>
+            <td id="v4"></td>
+          </tr>
+          <tr>
+            <td>Smartfren</td>
+            <td id="v5"></td>
+          </tr>
+        </table>
+      </div>
+      <!-- Akhir Tabel Hasil -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#e2edff"
+          fill-opacity="1"
+          d="M0,64L48,101.3C96,139,192,213,288,224C384,235,480,181,576,144C672,107,768,85,864,106.7C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <script src="script.js"></script>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 col-lg-4 footer-about wow fadeInUp">
+              <img class="logo-footer" src="img/chooseisp-removebg-preview.png" alt="logo-footer" data-at2x="assets/img/logo.png" />
+              <p>We are a young company that is always looking for new and creative ideas to help you make decisions using the methods we provide.</p>
+              <p><a href="#">Our Team</a></p>
+            </div>
+            <div class="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown">
+              <h3>Contact</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Jalan Sesama No. 4, Indonesia</p>
+              <p><i class="fas fa-phone"></i> Phone: (0812) 345 678 910</p>
+              <p><i class="fas fa-envelope"></i> Email: <a href="#">chooseisp@gamail.com</a></p>
+            </div>
+            <div class="col-md-4 col-lg-3 footer-social wow fadeInUp">
+              <p>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-pinterest"></i></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
