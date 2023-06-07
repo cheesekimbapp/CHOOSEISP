@@ -1,20 +1,28 @@
 # CHOOSEISP
-WEB Sistem Pemilihan Keputusan dengan menggunakan Metode Weighted Product (WP), Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS), dan Simple Additive Weighting (SAW) dengan nama CHOOSEISP
 
-Diciptakan sebagai proyek tugas matakuliah Sistem Pendukung Keputusan 
+Web Sistem Pendukung Keputusan (SPK) CHOOSEISP ini digunakan untuk pengambilan petusan pada kasus pemilihan Internet Service Provider (ISP) dengan tiga metode yang tersedia yaitu Simple Additive Weighting (SAW), Weighted Product (WP), dan Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS). Bhasa pemrograman yang digunakan adalah JavaScript dengan UI menggunakan framework adalah Bootstrap 5.
+
+# Tujuan 
+Tujuan pembuatan project akhir ini untuk memenuhi nilai UAS dari matakuliah SPK (Sistem Pengambilan Keputusan).
 
 Dosen Pengampu : Budi Prasetiyo
 
-WEB : https://cheesekimbapp.000webhostapp.com/
+# WEB 
+https://cheesekimbapp.000webhostapp.com/
 
-Nama Anggota Kelompok :
+# Implemented Theory 
+- Simple Additive Weighting (SAW)
+- Weighted Product (WP)
+- Technique for Order of Preference by Similarity to Ideal Solution (TOPSIS)
+
+# Team 
 
 1. Nurul Dwi Astuti
 2. Muhammad Muchtar Syarifrudin
 3. Ahmad Rifqi A
 4. Hava Maria Maszetta VFR
 
-Screenshot
+# Screenshot
 
 - Tampilan Home
 
