@@ -1,10 +1,10 @@
 <h1 align="center">
   <br>
-  <a href="#"><img src="https://github.com/Ch" alt="Markdownify" width="200"></a>
+  <a href="#"><img src="https://github.com/cheesekimbapp/CHOOSEISP/blob/main/img/chooseisp-removebg-preview.png" alt="Markdownify" width="200"></a>
   <br>
-  PetMate
+  CHOOSEISP
   <br>
-  “Your Pet Matchmaker”
+  “Choose Your Own ISP”
 </h1>
 
 
